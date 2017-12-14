@@ -57,6 +57,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -64,6 +65,7 @@ body {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+    animation:  fadetoright 1s ease-out;
 }
 
 .heading-primary-sub {
@@ -71,4 +73,39 @@ body {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.5px;
+    animation:  fadetoleft 1s ease-out;
+}
+
+
+@keyframes fadetoright {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadetoleft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
