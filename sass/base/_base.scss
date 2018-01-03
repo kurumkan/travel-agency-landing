@@ -1,0 +1,19 @@
+// Reset START
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // this defines what 1rem is
+  font-size: 62.5%; // equal to 10px - if the default font-size is 16px
+}
+
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+}
+// Reset END
