@@ -1,0 +1,22 @@
+{
+  "name": "travel-landing",
+  "version": "1.0.0",
+  "description": "simple landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kurumkan/travel-agency-landing.git"
+  },
+  "author": "kurumkan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kurumkan/travel-agency-landing/issues"
+  },
+  "homepage": "https://github.com/kurumkan/travel-agency-landing#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
