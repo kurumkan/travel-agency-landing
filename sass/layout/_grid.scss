@@ -1,0 +1,45 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background-color: #eee;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+    background-color: deeppink;
+  }
+
+  .col-1-of-2 {
+    width: calc(50% - 0.5 * #{$gutter-horizontal});
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc((200%  -  #{$gutter-horizontal}) / 3);
+  }
+
+  .col-1-of-4 {
+    width: calc(25% - 0.75 * #{$gutter-horizontal});
+  }
+
+  .col-2-of-4 {
+    width: calc(50% -  0.5 * #{$gutter-horizontal});
+  }
+
+  .col-3-of-4 {
+    width: calc(75% - 0.25 * #{$gutter-horizontal});
+  }
+}
+
+
