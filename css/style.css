@@ -131,7 +131,7 @@ body {
   position: relative;
   height: 50rem; }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
   .card__side {
