@@ -3,7 +3,6 @@
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  background-color: #eee;
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
@@ -14,7 +13,6 @@
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
     }
-    background-color: deeppink;
   }
 
   .col-1-of-2 {
