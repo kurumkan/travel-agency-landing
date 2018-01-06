@@ -135,6 +135,20 @@ body {
       outline: 1rem solid #55c57a;
       z-index: 100; }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  opacity: .15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .card {
   perspective: 150rem;
   position: relative;
@@ -310,6 +324,47 @@ body {
     -webkit-background-clip: text;
     color: transparent; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    backface-visibility: hidden; }
+  .story__img {
+    height: 100%;
+    transform: scale(1) translateX(-4rem); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: all .3s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: scale(0.95) translate(-4rem);
+    filter: blur(3px) brightness(80%); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -326,7 +381,13 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 15rem 0;
+  padding: 25rem 0 5rem 0;
+  margin-top: -10rem; }
+
+.section-stories {
+  position: relative;
+  background-color: transparent;
+  padding: 20rem 0 1rem 0;
   margin-top: -10rem; }
 
 .header {
