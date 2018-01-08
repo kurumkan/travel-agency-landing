@@ -74,7 +74,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
-  transiton: all .5s; }
+  transition: all .5s; }
   .heading-secondary:hover {
     transform: skew(1deg, 1deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
