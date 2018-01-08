@@ -26,10 +26,7 @@
     transform: scale(1) translateX(-4rem) ;
   }
   &__caption {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
+    @include abscenter;
     text-transform: uppercase;
     color: $color-white;
     text-align: center;
