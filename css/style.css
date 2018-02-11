@@ -1,3 +1,16 @@
+/*
+  0 - 600: phone
+  600 - 900: tablet portrait
+  900 - 1200: tablet landscape
+  1200-1800: our default style
+  1800 + : Large desktops
+
+
+  phone
+  tab-port
+  tab-land
+  big-desktop
+*/
 *,
 *::after,
 *::before {
@@ -7,6 +20,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 3rem;
@@ -416,11 +438,11 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 50%; }
   .story__img {
     height: 100%;
     transform: scale(1) translateX(-4rem); }
