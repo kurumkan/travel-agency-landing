@@ -17,6 +17,10 @@ body {
     font-weight: 700;
     letter-spacing: 3.5rem;
     animation:  fadetoright 1s ease-out;
+    @include respond(phone){
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
   &--sub {
     display: block;
@@ -24,6 +28,9 @@ body {
     font-weight: 400;
     letter-spacing: 1.75rem;
     animation:  fadetoleft 1s ease-out;
+    @include respond(phone){
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -37,6 +44,14 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .5s;
+
+  @include respond(tab-port){
+    font-size: 3rem;
+  }
+
+  @include respond(phone){
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skew(1deg, 1deg) scale(1.05);
